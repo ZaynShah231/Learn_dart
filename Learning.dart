@@ -1,3 +1,5 @@
+import 'dart:io';
+
 void main(){
 
  //integer
@@ -175,28 +177,97 @@ myfunc(){
  print(thin);
 
 
+//User Input
+
+print("Enter Your Name:");
+
+var name = stdin.readLineSync();
+
+print("Hello $name");
+
+//Convert string,int & doubles
+
+var a,b,c;
+a = 100;
+b= "1";
+c= a + int.parse(b);
+print("$a + $b = $c");
+
+
+//string to doubless
+
+var d,e,f;
+d= 1000;
+e = "10.1";
+f = d + double.parse(e);
+print("$d + $e = $f");
+
+
+//int to string
+
+var g,h,i;
+g=122;
+h = "22";
+i = g.toString() + h;
+print("$g + $h = $i");
+
+
+//User input type conversion
+print("Enter a Number");
+
+var nummy = stdin.readLineSync();
+var nummy2 = int.parse(nummy ?? '0') + 20;
+
+print("$nummy + 20 = $nummy2");
 
 
 
+//FIZZBUZZ
 
+int numb =1;
+ while(numb<=100){
+  if(numb % 5 == 0 && numb % 3 == 0) {
+    print("$numb. FIZZBUZZ!");
+  }
+  else if(numb % 3 == 0 ){
+   print("$numb. FIZZ!");
+  }
+  else if(numb % 5 == 0){
+   print("$numb. BUZZ!");
+  }
+  else{
+   print("$numb.");
+  }
+numb++;
+ }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ Person p1 = Person("ZAIN", "Male", 23);
+ p1.showData();
 
 }
+
+class Person{
+ String? name, sex;
+ int? age;
+
+ //constructor
+ Person(String name,sex, int age){
+  this.name = name;
+  this.sex = sex;
+  this.age= age;
+ }
+
+//method
+ void showData(){
+  print('name = $name');
+  print('sex = $sex');
+  print('age = $age');
+
+ }
+
+}
+
+
+
 
 
