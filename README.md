@@ -1,2 +1,2 @@
-# Learn_dart
+# Learning Flutter & Dart
 Learning Dart fundamentals 
